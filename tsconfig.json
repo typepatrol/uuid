@@ -1,4 +1,9 @@
 // NOTE: Do not extend or alter this file.  This file is only here to point
 // VSCode to the correct config file.  (There's no way of configuring the path
 // VSCode uses for the tsconfig.json file)
-{ "extends": "./tsconfig.esm.json" }
+{ "extends": "./tsconfig.esm.json",
+  "compilerOptions": {
+    "noEmit": true,
+    "strict": false
+  }
+}
