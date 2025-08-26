@@ -148,9 +148,13 @@ describe('v35', () => {
   });
 
   test('v3 undefined/null', () => {
+    // @ts-expect-error testing invalid input
     assert.throws(() => v3());
+    // @ts-expect-error testing invalid input
     assert.throws(() => v3('hello'));
+    // @ts-expect-error testing invalid input
     assert.throws(() => v3('hello.example.com', undefined));
+    // @ts-expect-error testing invalid input
     assert.throws(() => v3('hello.example.com', null, new Uint8Array(16)));
   });
 
@@ -249,7 +253,9 @@ describe('v35', () => {
   });
 
   test('v5 undefined/null', () => {
+    // @ts-expect-error testing invalid input
     assert.throws(() => v5());
+    // @ts-expect-error testing invalid input
     assert.throws(() => v5('hello'));
     assert.throws(() => v5('hello.example.com', undefined));
     assert.throws(() => v5('hello.example.com', null, new Uint8Array(16)));
