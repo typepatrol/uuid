@@ -257,7 +257,9 @@ describe('v35', () => {
     assert.throws(() => v5());
     // @ts-expect-error testing invalid input
     assert.throws(() => v5('hello'));
+    // @ts-expect-error testing invalid input
     assert.throws(() => v5('hello.example.com', undefined));
+    // @ts-expect-error testing invalid input
     assert.throws(() => v5('hello.example.com', null, new Uint8Array(16)));
   });
 
