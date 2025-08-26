@@ -61,6 +61,7 @@ describe('parse', () => {
   });
 
   test('UUID validation', () => {
+    // @ts-expect-error testing invalid input
     assert.throws(() => parse());
 
     assert.throws(() => parse('invalid uuid'));
