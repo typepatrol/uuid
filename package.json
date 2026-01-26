@@ -110,7 +110,10 @@
     "test:browser": "wdio run ./wdio.conf.js",
     "test:node": "npm-run-all --parallel examples:node:**",
     "test:watch": "c8 node --test --enable-source-maps --watch dist/esm/test/*.js",
-    "test": "c8 node --test --enable-source-maps dist/esm/test/*.js"
+    "test": "c8 node --test --enable-source-maps dist/esm/test/*.js",
+    "test:no-clean": "c8 --no-clean node --test --enable-source-maps dist/esm/test/*.js",
+    "test:clean": "rm -rf coverage .nyc_output",
+    "test:report": "c8 report --reporter=text --reporter=lcov"
   },
   "repository": {
     "type": "git",
