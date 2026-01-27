@@ -146,8 +146,8 @@
       "**/*.d.ts",
       "**/test/**",
       "src/**",
-      "dist/cjs/**"
-
+      "dist/cjs/**",
+      "dist/esm/**/*-browser.js"
     ]
   }
 }
